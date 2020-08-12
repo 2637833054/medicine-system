@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>变应原检查（皮试）</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		font: normal bold 40px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+	}
+	h3 {
+		font: normal bold 30px "微软雅黑";
+	}
+	.hea {
+		margin: 0 20px;
+		width: 740px;
+		height: 40px;
+		/*background-color: pink;*/
+		display: flex;
+	}
+	span {
+		font: normal normal 30px "微软雅黑";
+		flex: 1;
+	}
+	.tex {
+		margin-left: 10px;
+		font: normal normal 30px "微软雅黑";
+		width: 100px;
+		height: 40px;
+		display: inline-block;
+	}
+	.weigh {
+		font: normal normal 30px "微软雅黑";
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		width: 120px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 260px;
+		display: inline-block;
+	}
+	.sp {
+		font: normal normal 20px "微软雅黑";
+	}
+	.di {
+		margin: 5px 20px;
+		width: 45%;
+		display: inline-block;
+		/*background-color: pink;*/
+	}
+	.dia {
+		margin: 20px 10px;
+		width: 45%;
+		display: inline-block;
+		/*background-color: skyblue;*/
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+	}
+	.aa {
+		margin-left: 120px;
+	}
+	img {
+		width: 400px;
+		height: 400px;
+	}
+</style>
+<script>
+	onload = function () {
+		var btn = document.getElementById('btn');
+		btn.onclick = function () {
+			var file = document.getElementById('file');
+			console.log(file.value);
+			var img = document.getElementById('img');
+			var aa = file.value;
+			var arr = aa.split("\\");
+			console.log(arr[arr.length-1]);
+			img.src = arr[arr.length-1];
+		}
+	}  
+</script>
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<h1>变应原检查(皮试)</h1>
+
+<form action="./bianyingyuanjiancha.php" method="post">
+<span>病历号：</span><input type="text" name="id" class="weigh" autofocus="autofocus"><br>
+<div class="hea">
+	<span>过敏原</span>
+	<span>风团</span>
+	<span>红晕</span>
+	<span>过敏原</span>
+	<span>风团</span>
+	<span>红晕</span>
+</div>
+<div>
+	<div class="di">
+		<h3>A组：</h3>
+		<span class="sp">1,室内尘土</span><input type="text" name="aa" class="tex"><input type="text" name="ab" class="tex"><br>
+		<span class="sp">2,夏秋花粉Ⅰ</span><input type="text" name="ba" class="tex"><input type="text" name="bb" class="tex"><br>
+		<span class="sp">3,多价真菌Ⅰ</span><input type="text" name="ca" class="tex"><input type="text" name="cb" class="tex"><br>
+		<span class="sp">4,大籽嵩花粉</span><input type="text" name="da" class="tex"><input type="text" name="db" class="tex"><br>
+		<span class="sp">5,春季花粉Ⅰ</span><input type="text" name="ea" class="tex"><input type="text" name="eb" class="tex"><br>
+		<span class="sp">6,豚草花粉</span><input type="text" name="fa" class="tex"><input type="text" name="fb" class="tex"><br>
+		<span class="sp">7,春季花粉Ⅱ</span><input type="text" name="ga" class="tex"><input type="text" name="gb" class="tex"><br>
+		<span class="sp">8,粉尘螨</span><input type="text" name="ha" class="tex"><input type="text" name="hb" class="tex"><br>
+		<span class="sp">9,多价真菌Ⅱ</span><input type="text" name="ia" class="tex"><input type="text" name="ib" class="tex"><br>
+		<span class="sp">10,户尘螨</span><input type="text" name="ja" class="tex"><input type="text" name="jb" class="tex"><br>
+
+	</div>
+	<div class="dia">
+		<h3>B组：</h3>
+		<span class="sp">1,棉絮</span><input type="text" name="ka" class="tex"><input type="text" name="kb" class="tex"><br>
+		<span class="sp">2,桑蚕丝</span><input type="text" name="la" class="tex"><input type="text" name="lb" class="tex"><br>
+		<span class="sp">3,荞麦壳</span><input type="text" name="ma" class="tex"><input type="text" name="mb" class="tex"><br>
+		<span class="sp">4,多价真菌Ⅲ</span><input type="text" name="na" class="tex"><input type="text" name="nb" class="tex"><br>
+		<span class="sp">5,蟑螂</span><input type="text" name="oa" class="tex"><input type="text" name="ob" class="tex"><br>
+		<span class="sp">6,麻</span><input type="text" name="pa" class="tex"><input type="text" name="pb" class="tex"><br>
+		<span class="sp">7,狗皮</span><input type="text" name="qa" class="tex"><input type="text" name="qb" class="tex"><br>
+		<span class="sp">8,枝状枝孢</span><input type="text" name="ra" class="tex"><input type="text" name="rb" class="tex"><br>
+		<span class="sp">9,互隔铰链孢</span><input type="text" name="sa" class="tex"><input type="text" name="sb" class="tex"><br>
+		<span class="sp">10黄花嵩花粉</span><input type="text" name="ta" class="tex"><input type="text" name="tb" class="tex"><br>
+	</div>
+</div>
+<div>
+	<div class="di">
+		<h3>C组：</h3>
+		<span class="sp">1,柏树花粉</span><input type="text" name="ua" class="tex"><input type="text" name="ub" class="tex"><br>
+		<span class="sp">2,油菜花粉</span><input type="text" name="va" class="tex"><input type="text" name="vb" class="tex"><br>
+		<span class="sp">3,春季花粉Ⅲ</span><input type="text" name="wa" class="tex"><input type="text" name="wb" class="tex"><br>
+		<span class="sp">4,猫毛</span><input type="text" name="xa" class="tex"><input type="text" name="xb" class="tex"><br>
+		<span class="sp">5,白蜡花粉Ⅰ</span><input type="text" name="ya" class="tex"><input type="text" name="yb" class="tex"><br>
+		<span class="sp">6,地肤花粉</span><input type="text" name="za" class="tex"><input type="text" name="zb" class="tex"><br>
+		<span class="sp">7,黎花粉</span><input type="text" name="lia" class="tex"><input type="text" name="lib" class="tex"><br>
+		<span class="sp">8,梧桐花粉</span><input type="text" name="wua" class="tex"><input type="text" name="wub" class="tex"><br>
+		<span class="sp">9,葎草花粉</span><input type="text" name="lva" class="tex"><input type="text" name="lvb" class="tex"><br>
+		<span class="sp">10夏秋花粉Ⅱ</span><input type="text" name="xiaa" class="tex"><input type="text" name="xiab" class="tex"><br>
+
+	</div>
+	<div class="dia">
+		<h3>对照组：</h3>
+		<span class="sp">1,1:100组胺</span><input type="text" class="tex"><input type="text" class="tex"><br>
+		<span class="sp">2,阴性对照</span><input type="text" class="tex"><input type="text" class="tex"><br>
+		<span class="sp">3,1:10组胺</span><input type="text" class="tex"><input type="text" class="tex"><br>
+		<span class="sp">4,划痕实验</span><input type="text" class="tex"><input type="text" class="tex"><br>
+		<span class="sp">5,贴冰实验</span><input type="text" class="tex"><input type="text" class="tex"><br>
+	</div>
+		<span>添加图片：</span><input type="file" name="" id="file">
+		<img src="" alt="" id="img"><br>
+		<input type="button" value="查看" id="btn" class="btn"><br>
+	<a href="bianyingyuanjianchab.html">增加</a>
+	<input type="submit" value="提交" class="btn">
+	<a href="bianyingyuanxueye.html" class="aa">下一页</a>
+</div>
+</form>
+
+	
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "变应原检查（皮试））";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>

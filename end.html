@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>首页</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		font: normal bold 60px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.header {
+		margin-top: 100px;
+		height: 240px;
+	}
+	.tex {
+		font: normal normal 30px "微软雅黑";
+		width: 500px;
+		height: 60px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 200px;
+		width: 220px;
+		height: 60px;
+		display: inline-block;
+	}
+	.body {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 50px;
+		margin-bottom: 30px;
+	}
+	.footer {
+		margin-left: 80px;
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+		text-align: center;
+		line-height: 100px;
+		width: 280px;
+		height: 100px;
+		color: black;
+		border: 1px solid gray;
+		display: inline-block;
+	}
+	a:hover {
+		color: white;
+		background-color: black;
+	}
+</style>
+<script>
+function senda () {
+	document.form.action = "./output.php";
+	document.form.submit();
+}
+function sendb () {
+	document.form.action = "./outputb.php";
+	document.form.submit();
+}
+function sendc () {
+	document.form.action = "./outputc.php";
+	document.form.submit();
+}
+
+</script>
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<div class="header">
+	<h1>昆明医科大学第一附属医院耳鼻喉变态反应中心</h1>
+</div>
+
+<div class="body">
+	<form method="post" name="form">		<!-- 设置form表单提交数据 -->
+		<input type="button" value="导出doctor" class="btn" onclick="senda();"><br>
+		<input type="button" value="导出doctorb" class="btn" onclick="sendb();"><br>
+		<input type="button" value="导出doctorc" class="btn" onclick="sendc();"><br>
+	</form>
+	</div>
+<div class="footer">
+	<a href="tablea.html">国产</a>
+	
+	<a href="jinkoua.html">进口</a>
+</div>
+
+
+
+
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "首页";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>肺功能检查</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.header {
+		width: 300px;
+		height: 60px;
+	}
+	h1 {
+		font: normal bold 60px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+	}
+	span {
+		font: normal normal 30px "微软雅黑";
+	}
+	select {
+		font: normal normal 30px "微软雅黑";
+	}
+	.tex {
+		font: normal normal 30px "微软雅黑";
+		width: 160px;
+		height: 40px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		width: 120px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 200px;
+		display: inline-block;
+	}
+	.body {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 50px;
+		margin-bottom: 30px;
+	}
+	.weigh {
+		font: normal normal 30px "微软雅黑";
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+	}
+	.aa {
+		margin-left: 120px;
+	}
+</style>
+
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<div class="header"></div>
+<h1>肺功能检查</h1>
+<div class="body">
+	<form action="./feigongnengb.php" method="post">		<!-- 设置form表单提交数据 -->
+		<span>病历号：</span><input type="text" name="id" class="weigh" autofocus="autofocus"><br>
+		<span>录入时间：</span><input type="text" name="" class="weigh"><br>
+
+		<span>NO呼气浓度：</span><input type="text" name="NOb" class="tex"><span>ppd</span><br>
+		<span>均值：</span><input type="text" name="junzhib" class="tex"><span>ppd</span><br>
+		<span>产生速率：</span><input type="text" name="sulvb" class="weigh"><br>
+		<span>呼吸总阻抗:</span><input type="text" name="huxib" class="tex">
+		<span>气道总阻抗:</span><input type="text" name="qidaob" class="tex"><br>
+		<span>中心气道阻力:</span><input type="text" name="zhongxinb" class="tex">
+		<span>周围弹性阻力:</span><input type="text" name="zhouweib" class="tex"><br>
+		<span>用药前FEV1:</span><input type="text" name="yaoqianFEVb" class="tex">
+		<span>用药后FEV1:</span><input type="text" name="yaohouFEVb" class="tex"><br>
+		<span>用药前FEV1/FVC:</span><input type="text" name="yaoqianFVCb" class="weigh"><br>
+		<span>用药后FEV1/FVC:</span><input type="text" name="yaohouFVCb" class="weigh"><br>
+		
+		<input type="submit" value="提交" class="btn">
+		<a href="yaowupingfen.html" class="aa">下一页</a>
+	</form>
+		
+</div>
+
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "肺功能检查";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>

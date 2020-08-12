@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>症状</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.header {
+		width: 300px;
+		height: 60px;
+	}
+	h1 {
+		font: normal bold 60px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+	}
+	span {
+		font: normal normal 30px "微软雅黑";
+	}
+	select {
+		font: normal normal 30px "微软雅黑";
+	}
+	.tex {
+		font: normal normal 30px "微软雅黑";
+		width: 160px;
+		height: 40px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		width: 80px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 200px;
+		display: inline-block;
+	}
+	.body {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 50px;
+		margin-bottom: 30px;
+	}
+
+	.weigh {
+		font: normal normal 30px "微软雅黑";
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+	}
+	.sl {
+		width: 450px;
+		display: inline-block;
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+		
+	}
+	.hea {
+		height: 40px;
+		width: 500px;
+		margin-left: 100px;
+		display: flex;
+	}
+	.heas {
+		flex: 1;
+	}
+	.aa {
+		margin-left: 120px;
+	}
+</style>
+<script>
+	onload = function() {
+		//通过类名获取元素
+		var bta = document.getElementById('inpa');
+		bta.onclick = function() {
+			 var ab = document.getElementById('texa');
+			 var ac = bta.value;
+			 var tex = document.getElementById('spa');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var btb = document.getElementById('inpb');
+		btb.onclick = function() {
+			 var ab = document.getElementById('texb');
+			 var ac = btb.value;
+			 var tex = document.getElementById('spb');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var btc = document.getElementById('inpc');
+		btc.onclick = function() {
+			 var ab = document.getElementById('texc');
+			 var ac = btc.value;
+			 var tex = document.getElementById('spc');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var btd = document.getElementById('inpd');
+		btd.onclick = function() {
+			 var ab = document.getElementById('texd');
+			 var ac = btd.value;
+			 var tex = document.getElementById('spd');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var bte = document.getElementById('inpe');
+		bte.onclick = function() {
+			 var ab = document.getElementById('texe');
+			 var ac = bte.value;
+			 var tex = document.getElementById('spe');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var btf = document.getElementById('inpf');
+		btf.onclick = function() {
+			 var ab = document.getElementById('texf');
+			 var ac = btf.value;
+			 var tex = document.getElementById('spf');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+		var btg = document.getElementById('inpg');
+		btg.onclick = function() {
+			 var ab = document.getElementById('texg');
+			 var ac = btg.value;
+			 var tex = document.getElementById('spg');
+			 tex.innerHTML = ac;
+			 ab.appendChild(tex);
+		}
+	}
+
+	</script>
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<div class="header"></div>
+<h1>症状</h1>
+<div class="body">
+	<form action="./zhengzhuang.php" method="post">		<!-- 设置form表单提交数据 -->
+		<span>病历号：</span><input type="text" name="id" class="weigh" autofocus="autofocus"><br>
+		<span>录入时间：</span><input type="text" name="" class="weigh" autofocus="autofocus"><br>
+		<div class="hea"> <span class="heas">无症状</span><span class="heas">症状十分严重</span></div>
+		<div id="texa"><span>喷嚏：</span><input type="range" name="sneezing" id="inpa" min="0" max="10" value="0" class="sl"><span id="spa"></span></div>
+		<div id="texb"><span>流涕：</span><input type="range" name="runnynose" id="inpb" min="0" max="10" value="0" class="sl"><span id="spb"></span></div>
+		<div id="texc"><span>鼻痒：</span><input type="range" name="nasalitching" id="inpc" min="0" max="10" value="0" class="sl"><span id="spc"></span></div>
+		<div id="texd"><span>鼻塞：</span><input type="range" name="stuffynose" id="inpd" min="0" max="10" value="0" class="sl"><span id="spd"></span></div>
+		<div id="texe"><span>眼痒：</span><input type="range" name="eyeitching" id="inpe" min="0" max="10" value="0" class="sl"><span id="spe"></span></div>
+		<div id="texf"><span>眼红：</span><input type="range" name="envy" id="inpf" min="0" max="10" value="0" class="sl"><span id="spf"></span></div>
+		<div id="texg"><span>流泪：</span><input type="range" name="tears" id="inpg" min="0" max="10" value="0" class="sl"><span id="spg"></span></div>
+		
+		<span>哮喘症状评分：</span><br>
+		<div class="footer">
+			<p>哮喘症状评分：①日间症状评分标准：无症状为0分；少许症状，持续很短为1分；2次或2次以上很短症状为2分；
+			一天中较多时间有轻微症状，但对生活和工作影响不大为3分；一天中较多时间症状较重，对工作和生活有影响为4分。②夜间症状评分标准：无症状为0分；醒来1次或早醒为1分；醒来2次包括早醒为2分；醒来多次为3分；晚上不能入睡为4分。
+			</p>
+		</div>
+		<span>日间评分:</span>
+			<select name="dayscore" id="">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select><span>分</span>
+		<span>夜间评分:</span>
+			<select name="nightscore" id="">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select><span>分</span><br>
+			<a href="zhengzhuangb.html">增加</a>
+			<input type="submit" value="提交" class="btn">
+
+			<a href="feigongneng.html" class="aa">下一页</a>
+	</form>
+		
+		
+	</div>
+
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "症状";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>增加界面</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.header {
+		width: 300px;
+		height: 60px;
+	}
+	h1 {
+		font: normal bold 60px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+	}
+	span {
+		font: normal normal 30px "微软雅黑";
+	}
+	select {
+		font: normal normal 30px "微软雅黑";
+	}
+	.tex {
+		font: normal normal 30px "微软雅黑";
+		width: 160px;
+		height: 40px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		width: 120px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 260px;
+		display: inline-block;
+	}
+	.body {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 50px;
+		margin-bottom: 30px;
+	}
+	.weigh {
+		font: normal normal 30px "微软雅黑";
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+	}
+	
+</style>
+
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<div class="header"></div>
+<h1>基本信息</h1>
+<div class="body">
+	<form action="./add.php" method="post">		<!-- 设置form表单提交数据 -->
+		<span>病历号：</span><input type="text" name="id" class="weigh" autofocus="autofocus"><br>
+		<span>姓名：</span><input type="text" name="username" class="tex" autofocus="autofocus">
+		<span>性别：</span>
+			<select name="sex" id="">
+				<option value="男">男</option>
+				<option value="女">女</option>
+			</select>
+		<span>民族：</span><input type="text" name="national" class="tex" autofocus="autofocus"><br>
+		<span>出生日期：</span><input type="text" name="birthday" id="" class="tex">
+		<span>年龄：</span><input type="text" name="age" class="tex" autofocus="autofocus"><br>
+		<span>籍贯：</span><input type="text" name="place" class="weigh" autofocus="autofocus"><br>
+		<span>长期居住地：</span>
+			<select name="longplacea" id="">
+				<option value="农村">农村</option>
+				<option value="城市">城市</option>
+			</select>
+			<input type="text" name="longplaceb" class="tex" autofocus="autofocus"><br>
+		<span>职业：</span><input type="text" name="professional" class="tex" autofocus="autofocus"><br>
+		<span>联系电话：</span><input type="text" name="tell" class="weigh" autofocus="autofocus"><br>
+		<span>联系人：</span><input type="text" name="linkman" class="tex" autofocus="autofocus">
+		<!-- 联系人关系没用 -->
+		<span>联系人关系：</span><input type="text" name="" class="tex" autofocus="autofocus"><br>
+		<span>联系人电话：</span><input type="text" name="linkmantell" class="weigh" autofocus="autofocus"><br>
+		<span>既往病史：</span>
+			<select name="medicalhistorya" id="">
+				<option value="高血压">高血压</option>
+				<option value="心脏病">心脏病</option>
+				<option value="糖尿病">糖尿病</option>
+				<option value="肝炎">肝炎</option>
+				<option value="肾炎">肾炎</option>
+				<option value="精神病">精神病</option>
+				<option value="血液病">血液病</option>
+				<option value="癫痫">癫痫</option>
+				<option value="恶性肿瘤">恶性肿瘤</option>
+				<option value="其他">其他</option>
+			</select>
+			<input type="text" name="medicalhistoryb" class="weigh" autofocus="autofocus"><br>
+		<span>过敏史：</span>
+			<select name="allergya" id="">
+				<option value="蛋及蛋制品">蛋及蛋制品</option>
+				<option value="牛奶">牛奶</option>
+				<option value="牛肉">牛肉</option>
+				<option value="羊肉">羊肉</option>
+				<option value="小麦">小麦</option>
+				<option value="花生">花生</option>
+				<option value="大豆">大豆</option>
+				<option value="坚果">坚果</option>
+				<option value="海产品">海产品</option>
+				<option value="磺胺">磺胺</option>
+				<option value="头孢">头孢</option>
+				<option value="青霉素">青霉素</option>
+				<option value="碘">碘</option>
+				<option value="酒精">酒精</option>
+				<option value="其他">其他</option>
+			</select>
+			<input type="text" name="allergyb" class="weigh" autofocus="autofocus"><br>
+		<span>家族史：</span><input type="text" name="familyhistory" class="weigh" autofocus="autofocus"><br>
+		<span>身高：</span><input type="text" name="height" class="tex" autofocus="autofocus"><span>cm</span>
+		<span>体重：</span><input type="text" name="weight" class="tex" autofocus="autofocus"><span>kg</span><br>
+		<span>出生情况：</span>
+			<select name="child" id="">
+				<option value="第一胎">第一胎</option>
+				<option value="第二胎">第二胎</option>
+				<option value="第三胎">第三胎</option>
+				<option value="第四胎">第四胎</option>
+				<option value="第五胎">第五胎</option>
+			</select>
+			<!-- 顺产无用 -->
+			<select name="" id="">
+				<option value="顺产">顺产</option>
+				<option value="剖腹产">剖腹产</option>
+			</select>
+			<select name="zaocan" id="">
+				<option value="早产">早产</option>
+				<option value="足月">足月</option>
+			</select>
+		<span>喂养：</span>
+			<select name="feeding" id="">
+				<option value="母乳">母乳</option>
+				<option value="混合">混合</option>
+				<option value="人工">人工</option>
+			</select><br>
+		<input type="submit" value="提交" class="btn">
+		<a href="bingshi.html">下一页</a>
+	</form>
+	</div>
+
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "增加界面";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>

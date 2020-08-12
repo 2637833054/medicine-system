@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 以下内容不要动 -->
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 数控开发基础样式库（已作一定的自适应，button/label/input/textarea等设置了默认样式） -->
+<link class="_dcdev_preset_" type="text/css" rel="stylesheet" href="https://res.dcdev.net/dcdev/v1.0.3/assets/css/dcdevui.css">
+<!-- 页面标题 -->
+<title>病史</title> <!-- 桌面端浏览器及收藏夹图标 -->
+<link class="_dcdev_preset_" rel="icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<link class="_dcdev_preset_" rel="shortcut icon" href="https://www.dcdev.net/icon.png" type="image/x-icon">
+<!-- 以上内容不要动  -->
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.header {
+		width: 300px;
+		height: 60px;
+	}
+	h1 {
+		font: normal bold 60px "微软雅黑";
+		margin-left: 38%;
+		text-align: center;
+	}
+	span {
+		font: normal normal 30px "微软雅黑";
+	}
+	select {
+		font: normal normal 30px "微软雅黑";
+	}
+	.tex {
+		font: normal normal 30px "微软雅黑";
+		width: 160px;
+		height: 40px;
+		display: inline-block;
+	}
+	.btn {
+		font: normal normal 30px "微软雅黑";
+		width: 120px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 100px;
+		display: inline-block;
+	}
+	.body {
+		font: normal normal 30px "微软雅黑";
+		margin-left: 50px;
+		margin-bottom: 30px;
+	}
+	.weigh {
+		font: normal normal 30px "微软雅黑";
+		width: 400px;
+		height: 40px;
+		display: inline-block;
+	}
+	a {
+		font: normal normal 30px "微软雅黑";
+	}
+	img {
+		width: 400px;
+		height: 400px;
+	}
+</style>
+<script>
+	onload = function () {
+		var btn = document.getElementById('btn');
+		btn.onclick = function () {
+			var file = document.getElementById('file');
+			console.log(file.value);
+			var img = document.getElementById('img');
+			var aa = file.value;
+			var arr = aa.split("\\");
+			console.log(arr[arr.length-1]);
+			img.src = arr[arr.length-1];
+		}
+	}  
+</script>
+
+</head> 
+<body>
+<!--内容在 body start 及 body end 中间书写 -->
+<div class="dcdev-body-container" id="dcdev_body_container" style="display: none;">
+<!-- body start -->
+<div class="header"></div>
+<h1>病史</h1>
+<div class="body">
+	<form action="./bingshi.php" method="post">		<!-- 设置form表单提交数据 -->
+		<span>病历号：</span><input type="text" name="id" class="weigh" autofocus="autofocus"><br>
+		<span>主诉：</span><input type="text" name="username" class="weigh" autofocus="autofocus"><br>
+		<span>发病时间：</span><input type="text" name="pword" class="weigh" autofocus="autofocus"><br>
+		<span>初步诊断：</span>
+			<select name="primarydiagnosisa" id="">
+				<option value="过敏性鼻炎">过敏性鼻炎</option>
+				<option value="鼻窦炎">鼻窦炎</option>
+				<option value="鼻息肉">鼻息肉</option>
+				<option value="哮喘">哮喘</option>
+				<option value="变异性咳嗽">变异性咳嗽</option>
+				<option value="结膜炎">结膜炎</option>
+				<option value="特异性皮炎">特异性皮炎</option>
+				<option value="湿疹">湿疹</option>
+				<option value="荨麻疹">荨麻疹</option>
+				<option value="甲状腺功能亢进">甲状腺功能亢进</option>
+				<option value="免疫缺陷">免疫缺陷</option>
+				<option value="遗传代谢疾病">遗传代谢疾病</option>
+				<option value="其他">其他</option>
+			</select>
+			<input type="text" name="primarydiagnosisb" class="weigh" autofocus="autofocus"><br>
+		
+		<span>发病季节：</span>
+			<select name="seasona" id="">
+				<option value="无">无</option>
+				<option value="有">有</option>
+			</select>
+			<select name="seasonb" id="">
+				<option value="春季">春季</option>
+				<option value="夏季">夏季</option>
+				<option value="秋季">秋季</option>
+				<option value="冬季">冬季</option>
+				<option value="季节更替">季节更替</option>
+			</select><br>
+			<span>添加鼻内镜图片：</span><input type="file" name="" id="file">
+			<img src="" alt="" id="img"><br>
+		<input type="button" value="查看" id="btn" class="btn">
+		<input type="submit" value="提交" class="btn">
+		<a href="zhengzhuang.html">下一页</a>
+	</form>
+	</div>
+
+<!-- body end -->
+</div> 
+</body>
+
+<!------ 以下内容不要变动 --------------------------------------------------------->
+<script class="_dcdev_preset_" src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!- 不授权模式， 仅初始化常用变量及函数 -->
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/init.js" id = "initClass" authorize_mode = "none" console_mode = ""></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/ui.js" id = "ui_class" xhr_show_loading=1></script>
+<script class = "_dcdev_preset_" src = "https://res.dcdev.net/dcdev/v1.0.5/assets/js/import_dev_kit.js"></script>
+<script class = "_dcdev_preset_" >
+// 代码片段描述
+code_part_desc = "病史";
+code_part_id = "7504babc36af3a02";
+</script>
+<!------ 以上内容不要变动 ------------------------------------------------------- -->
+
+ 
+
+
+</html>
